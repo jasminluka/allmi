@@ -130,11 +130,12 @@
             
             <div class="opened">
               <h2>Contact Me</h2>
-              <form>
-                <input type="text" name="" placeholder="Full Name">
-                <input type="email" name="" placeholder="Email">
-                <input type="text" name="" placeholder="Company">
+              <form name="mobile-form" method="POST" netlify>
+                <input type="text" name="" placeholder="Full Name" />
+                <input type="email" name="" placeholder="Email" />
+                <input type="text" name="" placeholder="Company" />
                 <textarea name="" placeholder="Message"></textarea>
+                <div data-netlify-recaptcha="true"></div>
                 <button type="submit" name=""> GO! </button>
               </form>
             </div>
@@ -803,27 +804,29 @@
       </div>
 
       <div class="contact-content">
-        <div class="inputBox name">
-          <div class="inputText">
-            Full Name
+        <form name="contact-form" method="POST" netlify>
+          <div class="inputBox name">
+            <div class="inputText">
+              Full Name
+            </div>
+            <input type="text" name="" class="input" />
           </div>
-          <input type="text" name="" class="input">
-        </div>
-        <div class="inputBox email">
-          <div class="inputText">
-            Email
+          <div class="inputBox email">
+            <div class="inputText">
+              Email
+            </div>
+            <input type="text" name="" class="input" />
           </div>
-          <input type="text" name="" class="input">
-        </div>
-        <div class="inputBox message">
-          <div class="inputText">
-            Message
+          <div class="inputBox message">
+            <div class="inputText">
+              Message
+            </div>
+            <textarea class="input"></textarea>
           </div>
-          <textarea class="input"></textarea>
-        </div>
-        <div class="inputBox submit">
-          <button type="submit" class="submit-button">Submit</button>
-        </div>
+          <div class="inputBox submit">
+            <button type="submit" class="submit-button">Submit</button>
+          </div>
+        <form>
       </div>
     </section>
     
