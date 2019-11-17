@@ -1139,7 +1139,7 @@
 }
 
 .sidebar-contact .mobile .screen .opened form textarea {
-  height: 80px;
+  height: 110px;
   resize: none;
 }
 
@@ -1225,25 +1225,20 @@
           transition-delay: .6s;
 }
 
-.sidebar-contact .mobile .screen .opened.active form input:nth-child(3) {
-  -webkit-transition-delay: .8s;
-          transition-delay: .8s;
-}
-
 .sidebar-contact .mobile .screen .opened.active form textarea {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: .8s;
+          transition-delay: .8s;
 }
 
 .sidebar-contact .mobile .screen .opened.active form button {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
-  -webkit-transition-delay: 1.2s;
-          transition-delay: 1.2s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .sidebar-contact .mobile .bottom {
