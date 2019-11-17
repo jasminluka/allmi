@@ -1,0 +1,388 @@
+.about {
+  height: auto;
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+
+  .left {
+    position: relative;
+    width: 50%;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 70%;
+    }
+
+    &::before {
+      height: 102px;
+      top:  -100px;
+      right: 50px;
+      border-bottom: 2px solid $primary-color;
+      border-left: 2px solid $primary-color;
+      border-bottom-left-radius: 50px;
+    }
+
+    &::after {
+      height: 100%;
+      top: 0;
+      right: 0;
+      border-top: 2px solid $primary-color;
+      border-right: 2px solid $primary-color;
+      border-top-right-radius: 50px;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      transform: rotate(270deg);
+      height: 50px;
+      width: 300px;
+  
+      a {
+        @include buttonLinks(rgb(156, 155, 155));
+      }
+  
+      .next {
+        @include prevAndNextButtons;
+      }
+    }
+
+    .name {
+      position: absolute;
+      top: 20%;
+      right: -10%;
+      height: auto;
+      width: auto;
+      margin: 10px;
+      color: $primary-color;
+      font-size: 6rem;
+      text-transform: uppercase;
+      font-family: 'Bowlby One SC', cursive;
+      transform: rotate(270deg);
+      z-index: 150;
+
+      p:nth-child(2) {
+        margin-top: -35px;
+        margin-left: 10px;
+        letter-spacing: 5px;
+      }
+    }
+
+    .avatar {
+      position: absolute;
+      top: 100px;
+      right: -200px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .4);
+      object-fit: cover;
+      z-index: 100;
+    }
+
+    .logo {
+      position: absolute;
+      top: 730px;
+      right: 20px;
+      height: 150px;
+      width: 250px;
+      object-fit: cover;
+    }
+  }
+
+  .right {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding-bottom: 50px;
+
+    .content {
+      margin-top: 200px;
+      padding: 20px;
+      font-family: "Poppins";
+
+      h1.title {
+        width: 60%;
+        font-size: 2.5rem;
+        color: $text-color;
+        margin-bottom: 20px;
+      }
+
+      p.text {
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        color: $text-color;
+        margin-bottom: 30px;
+        font-family: "Montserrat";
+      }
+
+      .work-title {
+        font-size: 2.5rem;
+        color: $secondary-text-color;
+        margin-bottom: 30px;
+      }
+
+      .workflow {
+        width: 85%;
+
+        .step {
+          width: auto;
+          margin: 0 10px;
+          text-align: center;
+          display: inline-block;
+
+          i {
+            width: 100%;
+            font-size: 3rem;
+            color: $secondary-text-color;
+            margin-bottom: 20px;
+          }
+  
+          &-title {
+            width: 100%;
+            font-size: .8rem;
+            color: $secondary-text-color;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1199px) {
+  .about {
+    .left {
+      .name {
+        top: 20%;
+        right: -10%;
+        font-size: 4rem;
+      }
+
+      .avatar {
+        right: -150px;
+        width: 300px;
+        height: 300px;
+      }
+
+      .logo {
+        top: 600px;
+        right: 20px;
+        height: 100px;
+        width: 180px;
+      }
+    }
+
+    .right {
+      .intro {
+        margin-top: 250px;
+        padding-left: 170px;
+      }
+
+      .content {
+        margin-top: 120px;
+
+        h1.title {
+          width: 90%;
+          font-size: 2rem;
+        }
+  
+        p.text {
+          width: 90%;
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+  
+        .work-title {
+          font-size: 2rem;
+        }
+
+        .workflow {
+          width: 100%;
+  
+          .step {
+            i {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 991px) {
+  .about {
+    .left {
+      &::before {
+        display: none;
+      }
+
+      &::after {  
+        width: 100%;
+      }
+
+      .buttons {
+        display: none;
+      }
+    }
+
+    .right {
+      .intro {
+        height: 2rem;
+        padding-left: 160px;
+        font-size: 1rem;
+      }
+
+      .content {
+        h1.title {
+          font-size: 1.7rem;
+        }
+  
+        p.text {
+          width: 100%;
+          font-size: .8rem;
+          line-height: 1.1rem;
+        }
+  
+        .work-title {
+          font-size: 1.7rem;
+        }
+
+        .workflow {
+          .step {
+            margin: 0 5px;
+
+            i {
+              font-size: 2rem;
+            }
+
+            &-title {
+              font-size: .7rem;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+  .about {
+    .right {
+      .intro {
+        margin-top: 400px;
+        padding-left: 20px;
+      }
+
+      .content {
+        margin-top: 0;
+
+        .workflow {
+          width: 100%;
+
+          .step {
+            margin: 0 1px;
+
+            i {
+              font-size: 1.6rem;
+            }
+            
+            &-title {
+              font-size: .65rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+  .about {
+    padding: 40px;
+    margin: 0;
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+      height: 300px;
+
+      &::after {
+        display: none;
+      }
+
+      .name {
+        position: absolute;
+        top: 25%;
+        right: 37%;
+        font-size: 3rem;
+      }
+  
+      .avatar {
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 200px;
+      }
+  
+      .logo {
+        display: none;
+      }
+    }
+
+    .right {
+      width: 100%;
+      padding-bottom: 0;
+      text-align: center;
+
+      .intro {
+        margin-top: 0;
+        padding-left: 0;
+        justify-content: center;
+      }
+
+      .content {
+        margin-top: 0;
+
+        h1.title {
+          width: 100%;
+        }
+  
+        p.text {
+          font-size: .8rem;
+          line-height: 1.4rem;
+        }
+
+        .workflow {
+          .step {
+            margin: 5px;
+
+            i {
+              font-size: 2rem;
+            }
+            
+            &-title {
+              font-size: .8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

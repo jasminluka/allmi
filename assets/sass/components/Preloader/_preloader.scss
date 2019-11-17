@@ -1,0 +1,93 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+  z-index: 100000;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #222430;
+    transition: .5s;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+  
+  &.complete {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    &::before {
+      left: -50%;
+    }
+
+    &::after {
+      right: -50%;
+    }
+  }
+
+  // Loading Animation
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    z-index: 100001;
+
+    span {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
+      animation: animate 2s linear infinite;
+
+      &:nth-child(1) {
+        background: #fd3f39;
+        animation-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        background: #ffcb2f;
+        animation-delay: -.667s;
+      }
+
+      &:nth-child(3) {
+        background: #53d86a;
+        animation-delay: -1.33s;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0%, 87.5%, 100% {
+    top: 0;
+    left: 0;
+  }
+  12.5%, 25% {
+    top: 0;
+    left: 50%;
+  }
+  37.5%, 50% {
+    top: 50%;
+    left: 50%;
+  }
+  62.5%, 75% {
+    top: 50%;
+    left: 0;
+  }
+}

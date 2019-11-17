@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Chilanka|Montserrat:400,500,700,800|Poppins:400,400i,700,700i&display=swap');
+
+@import "./components/variables";
+@import "./components/animations";
+@import "./components/Preloader/preloader";
+@import "./components/Header/header";
+@import "./components/Header/scrollIndicator";
+@import "./components/Header/sidebar";
+@import "./components/Header/sidebar-contact";
+@import "./components/About/about";
+@import "./components/About/typewriting";
+@import "./components/Services/services";
+@import "./components/Experience/experience";
+@import "./components//Portfolio/portfolio";
+@import "./components//Portfolio/modal";
+@import "./components/Skills/skills";
+@import "./components/Contact/contact";
+@import "./components/Footer/footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+}
+
+section, footer {
+  opacity: 0;
+  transition: .7s ease-in-out;
+}
+
+[data-src] {
+  opacity: 0;
+  transition: .5s;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 4px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+  height: 400px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #616161;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.8);
+	background-color: #555;
+}

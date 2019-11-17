@@ -1,0 +1,40 @@
+$primary-color: #ff9d2c;
+$secondary-color: #ffd752;
+$text-color: rgb(71, 67, 67);
+$secondary-text-color: #333;
+$modal-duration: 1s;
+
+
+@mixin buttonLinks($color) {
+  font-size: 2rem;
+  text-decoration: none;
+  color: $color;
+  font-family: "Montserrat";
+  font-weight: 600;
+  transition: .5s;
+
+  &:hover {
+    color: #333;
+  }
+
+  span {
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+}
+
+@mixin prevAndNextButtons() {
+  position: relative;
+  margin-right: 40px;
+
+  &::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: -36px;
+    background: #333;
+    pointer-events: none;
+  }
+}
