@@ -131,9 +131,10 @@
             <div class="opened">
               <h2>Contact Me</h2>
               <form name="mobile-form" method="POST" netlify>
-                <input type="text" name="" placeholder="Full Name" />
-                <input type="email" name="" placeholder="Email" />
-                <textarea name="" placeholder="Message"></textarea>
+                <input type="text" name="name" placeholder="Full Name" />
+                <input type="email" name="email" placeholder="Email" />
+                <input type="text" name="company" placeholder="Company" />
+                <textarea name="message" placeholder="Message"></textarea>
                 <button type="submit" name=""> GO! </button>
               </form>
             </div>
@@ -807,24 +808,24 @@
             <div class="inputText">
               Full Name
             </div>
-            <input type="text" name="" class="input" />
+            <input type="text" name="name" class="input" autocomplete="off" />
           </div>
           <div class="inputBox email">
             <div class="inputText">
               Email
             </div>
-            <input type="text" name="" class="input" />
+            <input type="text" name="email" class="input" autocomplete="off" />
           </div>
           <div class="inputBox message">
             <div class="inputText">
               Message
             </div>
-            <textarea class="input"></textarea>
+            <textarea name="message" class="input"></textarea>
           </div>
           <div class="inputBox submit">
             <button type="submit" class="submit-button">Submit</button>
           </div>
-        <form>
+        </form>
       </div>
     </section>
     

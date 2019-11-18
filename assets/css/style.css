@@ -1220,25 +1220,30 @@
           transition-delay: .4s;
 }
 
-.sidebar-contact .mobile .screen .opened.active form input:nth-child(2) {
+.sidebar-contact .mobile .screen .opened.active form input[name='email'] {
   -webkit-transition-delay: .6s;
           transition-delay: .6s;
+}
+
+.sidebar-contact .mobile .screen .opened.active form input[name='company'] {
+  -webkit-transition-delay: .8s;
+          transition-delay: .8s;
 }
 
 .sidebar-contact .mobile .screen .opened.active form textarea {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
-  -webkit-transition-delay: .8s;
-          transition-delay: .8s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .sidebar-contact .mobile .screen .opened.active form button {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
 }
 
 .sidebar-contact .mobile .bottom {

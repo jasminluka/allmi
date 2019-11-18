@@ -77,6 +77,14 @@ window.addEventListener('load', () => {
     });
   });
 
+
+  // Prevent Default
+  // document.querySelectorAll('button[type="submit"]').forEach(button => {
+  //   button. addEventListener("click", e => {
+  //     e.preventDefault();
+  //   });
+  // });
+
   
   // Sidebar
 

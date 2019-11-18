@@ -373,21 +373,25 @@
               opacity: 1;
               transition-delay: .4s;
             
-              &:nth-child(2) {
+              &[name='email'] {
                 transition-delay: .6s;
+              }
+
+              &[name='company'] {
+                transition-delay: .8s;
               }
             }
 
             textarea {
               transform: translateY(0);
               opacity: 1;
-              transition-delay: .8s;
+              transition-delay: 1s;
             }
 
             button {
               transform: translateY(0);
               opacity: 1;
-              transition-delay: 1s;
+              transition-delay: 1.2s;
             }
           }
         }
