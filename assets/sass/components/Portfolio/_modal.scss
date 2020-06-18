@@ -32,6 +32,8 @@
       color: #fff;
       transition: .3s;
       z-index: 1;
+      background: transparent;
+      border: none;
       cursor: pointer;
 
       &:hover,
@@ -75,7 +77,6 @@
         color: #fff;
         padding: 13px 15px;
         border-radius: 50%;
-        outline: none;
         cursor: pointer;
         transition: .3s;
 

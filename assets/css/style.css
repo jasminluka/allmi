@@ -1130,7 +1130,6 @@
   font-family: "Montserrat";
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  outline: none;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
   opacity: 0;
@@ -2968,6 +2967,8 @@
   -webkit-transition: .3s;
   transition: .3s;
   z-index: 1;
+  background: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -3011,7 +3012,6 @@
   color: #fff;
   padding: 13px 15px;
   border-radius: 50%;
-  outline: none;
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
@@ -3723,7 +3723,6 @@
   background: transparent;
   color: #333;
   border: none;
-  outline: none;
   height: 50px;
   font-size: 1.3rem;
   font-weight: 600;
